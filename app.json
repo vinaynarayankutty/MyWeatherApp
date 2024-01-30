@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "MyWeatherApp",
-    "slug": "MyWeatherApp",
+    "slug": "myweatherapp",
     "scheme": "myweatherapp",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
@@ -29,6 +29,15 @@
     "plugins": ["expo-router"],
     "experiments": {
       "tsconfigPaths": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d5e03367-a307-4f08-a4f2-8264ee79aa3e"
+      }
+    },
+    "owner": "vinayn"
   }
 }
