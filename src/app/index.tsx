@@ -76,12 +76,12 @@ export default function WeatherScreen() {
       <View style={styles.blur} />
       <Stack.Screen options={{ headerShown: false }} />
       {!weather ? (
-        <ActivityIndicator />
+        <View style={styles.bodyContainer}>
+          <ActivityIndicator />
+        </View>
       ) : (
         <>
-          <View
-            style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-          >
+          <View style={styles.bodyContainer}>
             <LottieView
               autoPlay
               style={{
@@ -121,6 +121,8 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.5)",
   },
+
+  bodyContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
 
   location: {
     fontFamily: "Inter",
