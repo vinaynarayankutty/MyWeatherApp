@@ -7,8 +7,10 @@ const AnimatedLottieView = Animated.createAnimatedComponent(LottieView);
 
 const AnimatedSplashScreen = ({
   onAnimationFinish = (isCancelled) => {},
+  isAppReady,
 }: {
   onAnimationFinish?: (isCancelled: boolean) => void;
+  isAppReady: boolean;
 }) => {
   const animation = useRef<LottieView>(null);
 
@@ -27,7 +29,7 @@ const AnimatedSplashScreen = ({
         // Find more Lottie files at https://lottiefiles.com/featured
         source={require("@assets/lottie/weather.json")}
       />
-      <Text style={styles.title}>MY WEATHER APP</Text>
+      {isAppReady && <Text style={styles.title}>MY WEATHER APP</Text>}
     </View>
   );
 };
@@ -42,7 +44,8 @@ const styles = StyleSheet.create({
 
   title: {
     color: "#fff",
-    fontSize: 20,
+    fontSize: 40,
+    fontFamily: "AmaticBold",
   },
 });
 
