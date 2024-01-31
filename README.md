@@ -4,6 +4,21 @@
 
 This is a Weather App built using latest Expo SDK which fetches your current location and shows th current temparature and forecast for the next 5 days.
 
+
+### Installation
+Clone the repository and then run,
+```bash
+# npm
+npm install
+npm start
+
+# OR
+
+# yarn
+yarn install
+yarn start
+```
+
 ### This example uses:
 
 - Expo SDK 50
